@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Charu ❤️</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ff9ec4,#ffd6e7);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+text-align:center;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:25px;
+width:90%;
+max-width:350px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+h1{
+color:#ff4d88;
+}
+
+button{
+padding:12px 22px;
+border:none;
+border-radius:50px;
+font-size:16px;
+margin:10px;
+cursor:pointer;
+background:#ff4d88;
+color:white;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+#msg{
+margin-top:20px;
+font-size:18px;
+color:#444;
+}
+
+.heart{
+position:absolute;
+font-size:22px;
+animation:fall 5s linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px);
+opacity:1;
+}
+100%{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Hey Charu 💖</h1>
+
+<p>Ek chhota sa surprise hai... 🤭</p>
+
+<button onclick="step1()">Click Me ❤️</button>
+
+<div id="msg"></div>
+
+</div>
+
+<script>
+
+function step1(){
+document.getElementById("msg").innerHTML=`
+<h3>Question 😋</h3>
+
+<p>Guess karo duniya ki sabse cute ladki ka naam kya hai?</p>
+
+<button onclick="step2()">Tell Me 😍</button>
+`;
+}
+
+function step2(){
+
+document.getElementById("msg").innerHTML=`
+<h2>CHARU ❤️</h2>
+
+<p>Congratulations 😂❤️<br>
+Tumne sahi answer de diya.</p>
+
+<button onclick="finalMsg()">Aur Dekho 🥹</button>
+`;
+
+}
+
+function finalMsg(){
+
+document.getElementById("msg").innerHTML=`
+<h2>I Miss Your Smile 🥺❤️</h2>
+
+<p>Gussa rehna allowed hai...<br>
+Bas itna promise karo ki apni smile kabhi mat khona. 💖</p>
+
+<h3>From Abhishek ❤️</h3>
+`;
+
+for(let i=0;i<70;i++){
+
+let h=document.createElement("div");
+
+h.innerHTML="❤️";
+
+h.className="heart";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.animationDuration=(3+Math.random()*4)+"s";
+
+h.style.fontSize=(20+Math.random()*20)+"px";
+
+document.body.appendChild(h);
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
